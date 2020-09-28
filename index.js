@@ -226,9 +226,6 @@ function getArtistByIndex(array, index) {
     return `The artist at index ${array[index].id} is ${array[index].name}.`
   }
   
-
-
-
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(start, end){
@@ -242,6 +239,7 @@ function get20s(start, end){
     }
     return filteredArray;
   }
+
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
@@ -257,9 +255,6 @@ function removeArtist(array, index) {
     console.log(array.length-1)
   }
   
- 
-
-/**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
 For example, you could add the following information: 
@@ -295,10 +290,6 @@ function lotsOfArt(array) {
     return filteredArray;
   }
 
-
-
-
-
 // 🎨🎨 STRETCH 🎨🎨//
 
 
@@ -322,11 +313,21 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
-  }
+function getHTML(){
+    for (i = 0; i < artists.length; i++) {
+      console.log(
+        `<div id="artist">
+        <div class="image">
+            <img src=/>
+        </div>
+        <div class = "name">
+           <a href=${artists[i].wikipedia}> ${artists[i].name}</a>
+        </div>
+        <div class = "bio">${artists[i].bio}</div>
+        </div>`)
+   }
+}
+  
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
